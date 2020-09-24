@@ -1,0 +1,260 @@
+/* @group ----- Grid ----- */
+
+#wrap {
+    max-width: (($total-columns * $column-width) + (($total-columns - 1) * $gutter-width));
+    padding: 0 $spacing-unit;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#content {
+    width: 75%;
+    padding: $spacing-unit;
+}
+
+#primary-nav {
+    width: 25%;
+    padding: $spacing-unit;
+}
+
+#primary {
+    margin-left: 0;
+}
+
+#home #primary {
+    width: 50%;
+    margin-left: 0;
+    padding: 0 0 0 $spacing-unit;
+}
+
+#home #secondary {
+    width: 50%;
+    margin-right: 0;
+    padding: 0 $spacing-unit;
+}
+
+/* @end */
+
+/* @group ----- Header ----- */
+
+header {
+    background-size: cover !important;
+    -ms-behavior: url('../javascripts/backgroundsize.min.htc');
+    border-width: 0 0 20px 0;
+    border-style: solid;
+}
+
+.button.menu-button { display: none; }
+
+#primary-nav {
+    margin-top: .75 * $spacing-unit;
+
+    ul.navigation {
+        display: block;
+        margin: 0;
+    }
+
+    .active ul {
+        display: block;
+    }
+
+    ul {
+        margin-top: 0;
+        margin-bottom: 2 * $spacing-unit;
+    }
+
+    li {
+        background-color: #fff;
+
+        ul li { background-color: #fff; }
+
+        ul li ul li { background-color: #fff; }
+    }
+
+    a:hover {
+        font-weight: bold;
+    }
+}
+
+#search {
+    margin: $spacing-unit 0;
+}
+
+#search-form {
+    margin-bottom: $spacing-unit;
+}
+
+#query {
+    margin-bottom: $spacing-unit;
+}
+
+.secondary-nav, #secondary-nav {
+    border-bottom:1px solid #ccc;
+    font-size:1.125em;
+
+    a {
+        padding: 0.5em 1em 0.5em;
+        color: #666;
+        border-bottom: 0;
+    }
+
+    ul { margin: 0 0 -1px 0; }
+
+    li {
+        display: inline-block;
+        padding: 0;
+        border: 1px solid #ccc;
+    }
+
+    .active {
+        border-bottom-color: #fff;
+    }
+
+    .current a {
+        background:#fff;
+        color:#333;
+        font-weight:bold;
+        border: {
+            color: #ccc;
+            width: 1px;
+            style: solid;
+            bottom: { color: #fff; };
+        }
+    }
+}
+
+/* == Browse Items == */
+
+.browse-controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+    .pagination form {
+        margin-right: .5 * $spacing-unit;
+    }
+    
+    .row-count {
+        margin-left: .5 * $spacing-unit;
+    }
+}
+
+.pagination_list {
+    margin-top: .75 * $spacing-unit;
+    float: left;
+}
+
+.pagination_list a, li.pagination_current {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: (.25 * $spacing-unit) 10px;
+    vertical-align: top;
+    margin-right: 10px;
+}
+
+#sort-links  {
+    clear: none;
+    float: right;
+    ul {
+        margin-top: .75 * $spacing-unit;
+        padding-top: .5 * $spacing-unit;
+    }
+    span, li {
+        padding: (.25 * $spacing-unit) 0 (.25 * $spacing-unit) 20px;
+        margin-right: 0;
+    }
+}
+
+.resource-meta:not(:only-child) {
+    width: 60%;
+    padding-right: $spacing-unit;
+}
+
+.resource-list a.thumbnail {
+    width: 40%;
+    float: right;
+    border-bottom: 0;
+    text-align: center;
+}
+
+/* @end */
+
+
+/* @group ----- Forms ----- */
+
+div#contribution-type-form div.inputs {
+    clear: none;
+    float: right;
+    width: 69%;
+}
+
+.field {
+    border-bottom:1px solid #ccc;
+    width:100%;
+    overflow: auto;
+    padding: (1 * $spacing-unit) 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    
+    .inputs {
+        width: calc(70% - #{.5 * $spacing-unit});
+    }
+
+    input, input[type=text], select {
+        width: 100%;
+        float: right;
+    }
+
+    .field-meta {
+        width: calc(30% - #{.5 * $spacing-unit});
+    }
+
+    .columns.alpha label,
+    .columns.alpha .label {
+        width: 100%;
+    }
+}
+
+/* @end */
+
+/* @group ----- Advanced Search Form ----- */
+
+#advanced-search input[type="submit"] {
+    float: right;
+    margin-top: $spacing-unit;
+}
+
+#advanced-search .value:only-child .remove-value {
+    display: none;
+}
+
+/* @end */
+
+/* @group ----- Exhibit Builder ----- */
+
+#content nav + .exhibit {
+    clear: both;
+}
+
+#exhibit-blocks,
+.exhibits.summary #primary,
+#exhibit-page-navigation {
+    width: 75%;
+    margin-left: 0;
+    float: left;
+}
+
+#exhibit-page-navigation {
+    clear: none;
+}
+
+#exhibit-pages {
+    width: 25%;
+    margin-right: 0;
+    display: inline-block;
+    float: none;
+}
+
+/* @end */
