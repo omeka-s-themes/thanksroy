@@ -73,7 +73,16 @@ header {
     }
 
     a:hover {
-        font-weight: bold;
+        position: relative;
+    }
+
+    a:hover:before {
+        content: "\f0da";
+        font-family: "Font Awesome 5 Free";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
     }
 }
 
