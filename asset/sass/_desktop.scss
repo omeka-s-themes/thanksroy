@@ -157,3 +157,22 @@ header {
 }
 
 /* @end */
+
+/* $group ----- Pages ----- */
+
+.sub-menu {
+    float: left;
+    width: 30%;
+}
+
+.sub-menu ~ .blocks, 
+.sub-menu ~ .site-page-pagination {
+    width: 70%;
+    float: right;
+}
+
+.sub-menu a {
+    color: #000;
+}
+
+/* @end */

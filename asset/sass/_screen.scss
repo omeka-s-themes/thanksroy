@@ -522,6 +522,8 @@ fieldset {
 }
 
 #advanced-search {
+    margin: $spacing-unit 0;
+  
     input, select {
         width: 100%;
         display: block;
@@ -648,23 +650,24 @@ header {
     background-position-x: right !important;
 }
 
-.no-textshadow #site-title a {
+header h1 {
+    margin-bottom: 0;
+}
+
+.no-textshadow .site-title {
     background-color: #000;
     padding: (.25 * $spacing-unit);
 
     &:link, &:visited, &:active, &:hover { color: #fff; }
 }
 
-#site-title {
+.site-title {
     font-size: 2 * $base-font-size;
-    margin: 0 16px;
-    padding: $spacing-unit 0;
+    padding: $spacing-unit;
+    border-bottom: 0;
+    display: block;
 
-    a {
-        border-bottom: 0;
-    }
-
-    a img {
+    img {
         vertical-align: bottom;
         max-width: 100%;
         height: auto;
@@ -677,7 +680,9 @@ header {
 
 nav ul { padding-left: 0; }
 
-ul.navigation { padding-left: 0; }
+ul.navigation { 
+  padding-left: 0; 
+}
 
 .top ul {
     border: solid $gray;
@@ -736,6 +741,10 @@ ul.navigation { padding-left: 0; }
     position: relative;
     display: none;
     margin-top: 0;
+  
+    &.open {
+        display: block;
+    }
 
     ul {
         margin: 0;
@@ -868,25 +877,10 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
     margin-bottom: $spacing-unit;
 }
 
-.sub-menu {
-    float: left;
-    width: 30%;
-}
-
 .sub-menu .navigation {
     list-style: none;
     border-left: 3px solid #000;
     padding: (.5 * $spacing-unit) $spacing-unit;
-}
-
-.sub-menu ~ .blocks, 
-.sub-menu ~ .site-page-pagination {
-    width: 70%;
-    float: right;
-}
-
-.sub-menu a {
-    color: #000;
 }
 
 .sub-menu li {
@@ -965,6 +959,15 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
 
     .property { 
         margin-bottom: $spacing-unit; 
+    }
+    
+    .thumbnail {
+        margin-bottom: $spacing-unit;
+    }
+    
+    .advanced-search {
+        margin: (.5 * $spacing-unit) 0;
+        display: inline-block;
     }
 }
 
@@ -1046,7 +1049,8 @@ footer {
 #search {
     position: relative;
     box-sizing: border-box;
-
+    margin: $spacing-unit;
+ 
     &:after {
       content: "";
       display: block;
@@ -1205,7 +1209,7 @@ footer {
   margin-top: 0;
 }
 
-.sitewide-search-form ~ .advanced-search {
+.sitewide-search-form ~ #advanced-search {
   display: block;
   float: left;
 }
@@ -1273,6 +1277,10 @@ input[type="button"],
         ul li { background-color: #333; }
 
         ul li ul li { background-color: #000; }
+    }
+    
+    a {
+        color: #fff;
     }
 }
 

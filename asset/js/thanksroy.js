@@ -48,7 +48,7 @@ if (!Omeka) {
     };
 
     ThanksRoy.mobileMenu = function() {
-        $('.supports.touchevents #primary-nav li ul').each(function() {
+        $('#primary-nav li ul').each(function() {
             var childMenu = $(this);
             var subnavToggle = $('<button type="button" class="sub-nav-toggle" aria-label="Show subnavigation"></button>');
             subnavToggle.click(function() {
@@ -60,7 +60,7 @@ if (!Omeka) {
 
         $('.menu-button').click( function(e) {
             e.preventDefault();
-            $('#primary-nav ul.navigation').toggle();
+            $('#primary-nav ul.navigation').toggleClass('open');
         });
     };
 })(jQuery);

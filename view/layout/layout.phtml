@@ -39,6 +39,12 @@ $userBar = $this->userBar();
                 color: <?php echo $accentColor; ?>;
                 opacity: .75;
             }
+
+            @media (min-width:768px) {
+                #primary-nav a {
+                    color: <?php echo $accentColor; ?>
+                }
+            }
             <?php endif; ?>
 
             <?php if ($themeHeaderBg = $this->themeSettingAssetUrl('header_bg')): ?>
@@ -65,6 +71,7 @@ $userBar = $this->userBar();
         </header>
         <div id="wrap">
             <nav id="primary-nav">
+                <div class="menu-button button">Menu</div>
                 <?php
                 echo $site->publicNav()->menu()->renderMenu(null, [
                     'maxDepth' => $this->themeSetting('nav_depth') - 1
