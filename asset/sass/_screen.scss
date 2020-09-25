@@ -1195,6 +1195,82 @@ footer {
     display: none;
 }
 
+.results {
+  margin-bottom: 2 * $spacing-unit;
+  clear: both;
+}
+
+.results ul {
+  list-style: none;
+  padding-left: 0;  
+}
+
+.results .result-title {
+  font-weight: bold;
+}
+
+.results > ul {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.results > ul > li {
+  margin-bottom: $spacing-unit;
+    width: calc(50% - #{$spacing-unit});
+  
+  &:nth-child(2n) {
+    margin-left: $spacing-unit;
+  }
+ }
+ 
+ .results .result-site,
+ .results ul ul {
+   padding-left: .5 * $spacing-unit;
+   display: block;
+ }
+ 
+.results > a:last-child {
+   margin-top: (-.5 * $spacing-unit);
+ }
+
+.pagination + .results {
+  margin: $spacing-unit 0 0;
+  clear: both;
+}
+
+.sitewide-search-form ~ .results + .pagination {
+  margin-top: 0;
+}
+
+.sitewide-search-form ~ .advanced-search {
+  display: block;
+  float: left;
+}
+
+.sitewide-search-form ~ p {
+  clear: both;
+}
+
+.sitewide-search-form ~ h2 {
+  width: 50%;
+  float: left;
+  clear: both;
+}
+
+.sitewide-search-form ~ .pagination {
+  margin: (1.25 * $spacing-unit) 0 $spacing-unit;
+  text-align: right;
+  width: 50%;
+  float: right;
+}
+
+.index.search .results ul li {
+  margin-bottom: .25 * $spacing-unit;
+  padding-bottom: .25 * $spacing-unit;
+  border-bottom: 1px solid #ccc;
+}
+
 /* @end */
 
 /* @group ----- Colors ----- */
