@@ -18,22 +18,6 @@
     padding: $spacing-unit;
 }
 
-#primary {
-    margin-left: 0;
-}
-
-#home #primary {
-    width: 50%;
-    margin-left: 0;
-    padding: 0 0 0 $spacing-unit;
-}
-
-#home #secondary {
-    width: 50%;
-    margin-right: 0;
-    padding: 0 $spacing-unit;
-}
-
 /* @end */
 
 /* @group ----- Header ----- */
@@ -98,41 +82,6 @@ header {
     margin-bottom: $spacing-unit;
 }
 
-.secondary-nav, #secondary-nav {
-    border-bottom:1px solid #ccc;
-    font-size:1.125em;
-
-    a {
-        padding: 0.5em 1em 0.5em;
-        color: #666;
-        border-bottom: 0;
-    }
-
-    ul { margin: 0 0 -1px 0; }
-
-    li {
-        display: inline-block;
-        padding: 0;
-        border: 1px solid #ccc;
-    }
-
-    .active {
-        border-bottom-color: #fff;
-    }
-
-    .current a {
-        background:#fff;
-        color:#333;
-        font-weight:bold;
-        border: {
-            color: #ccc;
-            width: 1px;
-            style: solid;
-            bottom: { color: #fff; };
-        }
-    }
-}
-
 /* == Browse Items == */
 
 .browse-controls {
@@ -149,31 +98,6 @@ header {
     }
 }
 
-.pagination_list {
-    margin-top: .75 * $spacing-unit;
-    float: left;
-}
-
-.pagination_list a, li.pagination_current {
-    border: 1px solid #ccc;
-    display: inline-block;
-    padding: (.25 * $spacing-unit) 10px;
-    vertical-align: top;
-    margin-right: 10px;
-}
-
-#sort-links  {
-    clear: none;
-    float: right;
-    ul {
-        margin-top: .75 * $spacing-unit;
-        padding-top: .5 * $spacing-unit;
-    }
-    span, li {
-        padding: (.25 * $spacing-unit) 0 (.25 * $spacing-unit) 20px;
-        margin-right: 0;
-    }
-}
 
 .resource-meta:not(:only-child) {
     width: 60%;
@@ -189,14 +113,7 @@ header {
 
 /* @end */
 
-
 /* @group ----- Forms ----- */
-
-div#contribution-type-form div.inputs {
-    clear: none;
-    float: right;
-    width: 69%;
-}
 
 .field {
     border-bottom:1px solid #ccc;
@@ -237,33 +154,6 @@ div#contribution-type-form div.inputs {
 
 #advanced-search .value:only-child .remove-value {
     display: none;
-}
-
-/* @end */
-
-/* @group ----- Exhibit Builder ----- */
-
-#content nav + .exhibit {
-    clear: both;
-}
-
-#exhibit-blocks,
-.exhibits.summary #primary,
-#exhibit-page-navigation {
-    width: 75%;
-    margin-left: 0;
-    float: left;
-}
-
-#exhibit-page-navigation {
-    clear: none;
-}
-
-#exhibit-pages {
-    width: 25%;
-    margin-right: 0;
-    display: inline-block;
-    float: none;
 }
 
 /* @end */
