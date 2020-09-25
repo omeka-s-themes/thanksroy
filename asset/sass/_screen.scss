@@ -75,7 +75,7 @@ dd { margin-left:1.3333em; }
 
 table {
     width:100%;
-    border: 1px solid #ccc;
+    border: 1px solid $gray;
     border-width: 1px 1px 0 0;
     margin-bottom:1.3333em;
 }
@@ -86,7 +86,7 @@ th {
 }
 
 th, td {
-    border: solid #ccc;
+    border: solid $gray;
     border-width: 0 0 1px 1px;
     padding: 4px;
 }
@@ -142,7 +142,7 @@ blockquote {
 .resource-list img,
 .media-list img {
     height: 100%;
-    border: 1px solid #ccc;
+    border: 1px solid $gray;
     padding: ((.25 * $spacing-unit) - 1px);
     background-color: #fff;
 }
@@ -556,7 +556,7 @@ fieldset {
     }
 
     .field {
-        border-bottom:1px solid #ccc;
+        border-bottom:1px solid $gray;
         width:100%;
         overflow: auto;
         padding: $spacing-unit 0;
@@ -663,7 +663,7 @@ nav ul { padding-left: 0; }
 ul.navigation { padding-left: 0; }
 
 .top ul {
-    border: solid #ccc;
+    border: solid $gray;
     border-width: 0 0 1px 0;
 }
 
@@ -689,7 +689,7 @@ ul.navigation { padding-left: 0; }
 .no-backgroundsize .menu-button:after { background-image: url('../images/menu_ie.png'); }
 
 #primary-nav ul.navigation {
-    border-top: 1px solid #ccc;
+    border-top: 1px solid $gray;
     position: relative;
     display: none;
     margin-top: 0;
@@ -733,12 +733,12 @@ ul.navigation { padding-left: 0; }
         }
 
         a {
-            border-bottom: 1px solid #ccc;
+            border-bottom: 1px solid $gray;
             display:block;
             padding: (.5 * $spacing-unit) $spacing-unit;
 
             &:focus {
-              border: 1px dotted #ccc;
+              border: 1px dotted $gray;
             }
         }
     }
@@ -795,7 +795,7 @@ nav.pagination:nth-of-type(3), #content > .pagination:nth-of-type(2) {
 }
 
 nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
-    border-top: 1px solid #ccc;
+    border-top: 1px solid $gray;
     border-bottom: 0;
     padding-top: $spacing-unit;
     margin: 0 0 $spacing-unit 0;
@@ -810,7 +810,7 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
 }
 
 .site-page-pagination {
-    border-top: 1px solid #ccc;
+    border-top: 1px solid $gray;
     margin: 0 0 $spacing-unit 0;
     display: flex;
     justify-content: space-between;
@@ -1019,7 +1019,7 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
     .value {
         padding-bottom: .25 * $spacing-unit;
         margin-bottom: .25 * $spacing-unit;
-        border-bottom: 1px solid #ccc;
+        border-bottom: 1px solid $gray;
     }
     
     .value:last-child {
@@ -1041,7 +1041,7 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
 
 #collection-items {
     .item {
-        border-bottom:1px solid #ccc;
+        border-bottom:1px solid $gray;
         padding:20px 0;
         overflow:hidden;
         width:100%;
@@ -1069,7 +1069,7 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
     
     .item {
         overflow:hidden;
-        border-top:1px solid #ccc;
+        border-top:1px solid $gray;
         padding: $spacing-unit 0;
 
         &:last-of-type { border-bottom: 0; }
@@ -1082,11 +1082,11 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
 
 .tags li { display:inline; }
 
-#item-content img {padding:5px; border:1px solid #ccc; margin-bottom:2em;}
+#item-content img {padding:5px; border:1px solid $gray; margin-bottom:2em;}
 
 #featured-item h3 { clear: both; }
 
-.items-list li {border-bottom:1px solid #ccc; margin-bottom:1.33333em;}
+.items-list li {border-bottom:1px solid $gray; margin-bottom:1.33333em;}
 
 .media-list {
     display: flex;
@@ -1102,7 +1102,7 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
         max-width: 25%;
 
         img {
-            border: 1px solid #ccc;
+            border: 1px solid $gray;
             display: block;
             max-width: 100%;
             height: auto;
@@ -1111,11 +1111,13 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
     }
 }
 
-.show #content > h2 {
+.show #content > h2:first-child,
+.item-set #content > h2:first-child {
     margin-bottom: .25 * $spacing-unit;
 }
 
-.show #content > h2 + h3 {
+.show #content > h2 + h3,
+.item-set #content > h2 + h3 {
     display: inline-block;
     padding: .25 * $spacing-unit;
     font-weight: normal;
@@ -1127,7 +1129,7 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
 
 .browse .collection {
     clear: both;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid $gray;
     padding-top: $spacing-unit - 1px;
 
     .view-items-link {
@@ -1268,7 +1270,7 @@ footer {
 .index.search .results ul li {
   margin-bottom: .25 * $spacing-unit;
   padding-bottom: .25 * $spacing-unit;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid $gray;
 }
 
 /* @end */
