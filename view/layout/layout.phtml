@@ -10,6 +10,8 @@ $this->headLink()->prependStylesheet($this->assetUrl('css/style.css'));
 $this->headLink()->prependStylesheet($this->assetUrl('css/iconfonts.css', 'Omeka'));
 $this->headLink()->prependStylesheet('//fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700italic,700');
 $this->headScript()->prependFile($this->assetUrl('js/thanksroy.js'));
+$this->headScript()->prependFile($this->assetUrl('js/jquery-accessibleMegaMenu.js'));
+$this->headScript()->prependFile($this->assetUrl('js/modernizr.js'));
 $this->headScript()->prependFile($this->assetUrl('js/global.js', 'Omeka'));
 $this->headScript()->prependFile($this->assetUrl('vendor/jquery/jquery.min.js', 'Omeka'));
 $this->jsTranslate();
@@ -63,13 +65,11 @@ $userBar = $this->userBar();
         </header>
         <div id="wrap">
             <nav id="primary-nav">
-                <nav>
                 <?php
                 echo $site->publicNav()->menu()->renderMenu(null, [
                     'maxDepth' => $this->themeSetting('nav_depth') - 1
                 ]);
                 ?>
-                </nav>
                 <div id="search">
                     <?php echo $this->partial('common/search-form'); ?>
                 </div>
@@ -86,5 +86,11 @@ $userBar = $this->userBar();
                 <?php endif; ?>
             </footer>
         </div>
+    <script type="text/javascript">
+    jQuery(document).ready(function () {
+        ThanksRoy.mobileMenu();
+        ThanksRoy.megaMenu('.no-touchevents #primary-nav');
+    });
+    </script>
     </body>
 </html>

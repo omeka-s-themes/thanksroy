@@ -703,7 +703,33 @@ ul.navigation { padding-left: 0; }
     margin-left: 10px;
 }
 
-.no-backgroundsize .menu-button:after { background-image: url('../images/menu_ie.png'); }
+.sub-nav-toggle:after,
+[aria-haspopup="true"]:after {
+    font-family: "Font Awesome 5 Free";
+    content: "\f055";
+    font-size: 14px;
+    float: right;
+    transition-property: transform;
+    transition: .5s ease;
+}
+
+.open .sub-nav-toggle:after,
+[aria-haspopup="true"].open:after {
+    transform: rotate(405deg);
+}
+
+.sub-nav-toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: (2 * $spacing-unit);
+    width: (2 * $spacing-unit);
+
+    &:after {
+        float: none;
+        text-align: center;
+    }
+}
 
 #primary-nav ul.navigation {
     border-top: 1px solid $gray;
