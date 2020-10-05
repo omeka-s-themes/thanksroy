@@ -89,12 +89,8 @@ header {
     flex-wrap: wrap;
     justify-content: space-between;
     
-    .pagination form {
-        margin-right: .5 * $spacing-unit;
-    }
-    
-    .row-count {
-        margin-left: .5 * $spacing-unit;
+    .advanced-search {
+        margin: 0;
     }
 }
 
@@ -176,3 +172,21 @@ header {
 }
 
 /* @end */
+
+.sitewide-search-form ~ h2 {
+  width: 50%;
+  float: left;
+  clear: both;
+}
+
+.sitewide-search-form ~ .pagination {
+  margin: (1.25 * $spacing-unit) 0 $spacing-unit;
+  text-align: right;
+  width: 50%;
+  float: right;
+}
+
+.sitewide-search-form ~ .advanced-search {
+  display: block;
+  float: left;
+}

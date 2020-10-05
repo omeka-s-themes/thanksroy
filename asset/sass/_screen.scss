@@ -78,6 +78,7 @@ table {
     border: 1px solid $gray;
     border-width: 1px 1px 0 0;
     margin-bottom:1.3333em;
+    border-collapse: collapse;
 }
 
 th {
@@ -319,7 +320,7 @@ input[type="week"] {
   border: 1px solid #000;
   color: #000;
   outline: 0;
-  padding: 2px 10px;
+  padding: 3px 10px;
   font-size: $base-font-size;
   /*
     Leaving out Helvetica Neue, to not throw off size="..."
@@ -708,34 +709,6 @@ ul.navigation {
     margin-left: 10px;
 }
 
-.sub-nav-toggle:after,
-[aria-haspopup="true"]:after {
-    font-family: "Font Awesome 5 Free";
-    content: "\f055";
-    font-size: 14px;
-    float: right;
-    transition-property: transform;
-    transition: .5s ease;
-}
-
-.open .sub-nav-toggle:after,
-[aria-haspopup="true"].open:after {
-    transform: rotate(405deg);
-}
-
-.sub-nav-toggle {
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: (2 * $spacing-unit);
-    width: (2 * $spacing-unit);
-
-    &:after {
-        float: none;
-        text-align: center;
-    }
-}
-
 #primary-nav ul.navigation {
     border-top: 1px solid $gray;
     position: relative;
@@ -807,6 +780,7 @@ ul.navigation {
         float: right;
         transition-property: transform;
         transition: .5s ease;
+        display: inline-block;
     }
 
     .open .sub-nav-toggle:after,
@@ -820,6 +794,8 @@ ul.navigation {
         right: 0;
         height: (2 * $spacing-unit);
         width: (2 * $spacing-unit);
+        background-color: transparent;
+        color: #888;
 
         &:after {
             float: none;
@@ -948,13 +924,24 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
       padding-left: 0;
       clear: both;
     }
+
+    .pagination form {
+        margin-right: .5 * $spacing-unit;
+    }
     
-    .item {
+    .row-count {
+        margin-left: .5 * $spacing-unit;
+    }
+        
+    .advanced-search {
+        margin: $spacing-m 0;
+        display: inline-block;
+    }
+    
+    .resource {
         overflow:hidden;
         border-top:1px solid $gray;
         padding: $spacing-unit 0;
-
-        &:last-of-type { border-bottom: 0; }
     }
 
     .property { 
@@ -965,9 +952,14 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
         margin-bottom: $spacing-unit;
     }
     
-    .advanced-search {
-        margin: (.5 * $spacing-unit) 0;
-        display: inline-block;
+    .sorting {
+        display: flex;
+    }
+    
+    .sorting select {
+        max-width: 40%;
+        height: auto;
+        margin-right: $spacing-s;
     }
 }
 
@@ -995,7 +987,7 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
 }
 
 .show #content > h2:first-child,
-.item-set #content > h2:first-child {
+.item-set.item.browse #content > h2:first-child {
     margin-bottom: .25 * $spacing-unit;
 }
 
@@ -1028,7 +1020,8 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
 footer {
     clear:both;
     overflow:hidden;
-    padding:20px;
+    padding: $spacing-l;
+    margin-top: $spacing-l;
     border-top:1px solid #000;
     width: 100%;
 
@@ -1161,6 +1154,16 @@ footer {
     display: none;
 }
 
+.sitewide-search-form ~ .advanced-search {
+    margin-top: -.5 * $spacing-unit;
+    margin-bottom: .5 * $spacing-unit;
+}
+
+.sitewide-search-form ~ h2,
+.sitewide-search-form ~ .pagination {
+    width: 100%;
+}
+
 .results {
   margin-bottom: 2 * $spacing-unit;
   clear: both;
@@ -1209,26 +1212,8 @@ footer {
   margin-top: 0;
 }
 
-.sitewide-search-form ~ #advanced-search {
-  display: block;
-  float: left;
-}
-
 .sitewide-search-form ~ p {
   clear: both;
-}
-
-.sitewide-search-form ~ h2 {
-  width: 50%;
-  float: left;
-  clear: both;
-}
-
-.sitewide-search-form ~ .pagination {
-  margin: (1.25 * $spacing-unit) 0 $spacing-unit;
-  text-align: right;
-  width: 50%;
-  float: right;
 }
 
 .index.search .results ul li {
