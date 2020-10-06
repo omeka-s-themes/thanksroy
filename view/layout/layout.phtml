@@ -52,10 +52,10 @@ $userBar = $this->userBar();
                     color: <?php echo $linkColor; ?>;
                 }
                 a:visited {
-                    color: <?php echo $this->brightenColor($linkColor, 40); ?>;
+                    color: <?php echo $this->BrightenColor($linkColor, 40); ?>;
                 }
                 a:hover, a:active, a:focus {
-                    color: <?php echo $this->brightenColor($linkColor, -40); ?>;
+                    color: <?php echo $this->BrightenColor($linkColor, -40); ?>;
                 }
         
                 .button, button,

@@ -5,7 +5,6 @@ use Laminas\View\Helper\AbstractHelper;
 
 class BrightenColor extends AbstractHelper
 {
-    <?php
     /**
      * Modify a hex color by the given number of steps (out of 255).
      *
@@ -33,3 +32,5 @@ class BrightenColor extends AbstractHelper
         return '#'.$r_hex.$g_hex.$b_hex;
     }
 }
+
+?>
