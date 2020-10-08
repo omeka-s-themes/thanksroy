@@ -508,6 +508,15 @@ fieldset {
     }
 }
 
+.field-meta {
+    margin-bottom: $spacing-m;
+}
+
+.field-meta label,
+.field-meta .label {
+    font-weight: bold;
+}
+
 .search-entry {
     background-color: rgba(0,0,0,.05);
     padding: (.5 * $spacing-unit) 2%;
@@ -667,6 +676,7 @@ header h1 {
     padding: $spacing-unit;
     border-bottom: 0;
     display: block;
+    color: #000;
 
     img {
         vertical-align: bottom;
@@ -794,8 +804,6 @@ ul.navigation {
         right: 0;
         height: (2 * $spacing-unit);
         width: (2 * $spacing-unit);
-        background-color: transparent;
-        color: #888;
 
         &:after {
             float: none;
@@ -1252,21 +1260,6 @@ input[type="button"],
 .pagination_previous a {
   background-color: #000;
   color: #fff;
-}
-
-#primary-nav {
-
-    li {
-        background-color: #4d4d4d;
-
-        ul li { background-color: #333; }
-
-        ul li ul li { background-color: #000; }
-    }
-    
-    a {
-        color: #fff;
-    }
 }
 
 /* @end */

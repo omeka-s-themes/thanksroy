@@ -39,6 +39,10 @@ header {
         margin: 0;
     }
 
+    .sub-nav-toggle {
+        background-color: transparent;
+    }
+
     .active ul {
         display: block;
     }
@@ -54,6 +58,10 @@ header {
         ul li { background-color: #fff; }
 
         ul li ul li { background-color: #fff; }
+    }
+    
+    a:link {
+        color: inherit;
     }
 
     a:hover {
