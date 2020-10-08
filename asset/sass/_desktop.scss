@@ -2,7 +2,6 @@
 
 #wrap {
     max-width: (($total-columns * $column-width) + (($total-columns - 1) * $gutter-width));
-    padding: 0 $spacing-unit;
     margin: 0;
     display: flex;
     flex-wrap: wrap;

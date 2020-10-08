@@ -1240,6 +1240,16 @@ body {
 
 header {
     border-color: #000;
+    display: flex;
+    align-items: center;
+
+    &.medium {
+        min-height: 7 * $spacing-unit;
+    }
+    
+    &.tall {
+        min-height: 10 * $spacing-unit;
+    }
 }
 
 a {

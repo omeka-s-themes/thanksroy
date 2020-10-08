@@ -87,7 +87,8 @@ $userBar = $this->userBar();
     <?php echo $this->htmlElement('body'); ?>
         <a id="skipnav" href="#content"><?php echo $this->translate('Skip to main content'); ?></a>
         <?php echo $userBar; ?>
-        <header>
+        <?php ($headerHeight = $this->themeSetting('banner_height')) || ($headerHeight = 'small') ?>
+        <header class="<?php echo $headerHeight; ?>">
             <h1>
                 <a href="<?php echo $site->url(); ?>" class="site-title">
                 <?php if ($this->themeSetting('logo')): ?>
