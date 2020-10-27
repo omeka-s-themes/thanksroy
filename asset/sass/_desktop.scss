@@ -9,12 +9,12 @@
 
 #content {
     width: 75%;
-    padding: $spacing-unit;
+    padding: $spacing-l;
 }
 
 #primary-nav {
     width: 25%;
-    padding: $spacing-unit;
+    padding: $spacing-l;
 }
 
 /* @end */
@@ -31,7 +31,7 @@ header {
 .button.menu-button { display: none; }
 
 #primary-nav {
-    margin-top: .75 * $spacing-unit;
+    margin-top: .75 * $spacing-l;
 
     ul.navigation {
         display: block;
@@ -48,7 +48,7 @@ header {
 
     ul {
         margin-top: 0;
-        margin-bottom: 2 * $spacing-unit;
+        margin-bottom: 2 * $spacing-l;
     }
 
     li {
@@ -78,15 +78,15 @@ header {
 }
 
 #search {
-    margin: $spacing-unit 0;
+    margin: $spacing-l 0;
 }
 
 #search-form {
-    margin-bottom: $spacing-unit;
+    margin-bottom: $spacing-l;
 }
 
 #query {
-    margin-bottom: $spacing-unit;
+    margin-bottom: $spacing-l;
 }
 
 /* == Browse Items == */
@@ -104,7 +104,7 @@ header {
 
 .resource-meta:not(:only-child) {
     width: 60%;
-    padding-right: $spacing-unit;
+    padding-right: $spacing-l;
 }
 
 .resource-list a.thumbnail {
@@ -122,13 +122,13 @@ header {
     border-bottom:1px solid #ccc;
     width:100%;
     overflow: auto;
-    padding: (1 * $spacing-unit) 0;
+    padding: (1 * $spacing-l) 0;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
     
     .inputs {
-        width: calc(70% - #{.5 * $spacing-unit});
+        width: calc(70% - #{.5 * $spacing-l});
     }
 
     input, input[type=text], select {
@@ -137,7 +137,7 @@ header {
     }
 
     .field-meta {
-        width: calc(30% - #{.5 * $spacing-unit});
+        width: calc(30% - #{.5 * $spacing-l});
     }
 
     .columns.alpha label,
@@ -152,7 +152,7 @@ header {
 
 #advanced-search input[type="submit"] {
     float: right;
-    margin-top: $spacing-unit;
+    margin-top: $spacing-l;
 }
 
 #advanced-search .value:only-child .remove-value {
@@ -187,7 +187,7 @@ header {
 }
 
 .sitewide-search-form ~ .pagination {
-  margin: (1.25 * $spacing-unit) 0 $spacing-unit;
+  margin: (1.25 * $spacing-l) 0 $spacing-l;
   text-align: right;
   width: 50%;
   float: right;

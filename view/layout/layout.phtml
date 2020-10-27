@@ -44,7 +44,8 @@ $userBar = $this->userBar();
                 }
 
                 a.site-title:link, a.site-title:visited,
-                a.site-title:active, a.site-title:hover {
+                a.site-title:active, a.site-title:hover,
+                .sub-nav-toggle:after {
                     color: <?php echo $titleColor; ?>;
                     <?php if ($this->themeSetting('header_background')): ?>
                     text-shadow: 0px 0px 20px #000;

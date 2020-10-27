@@ -782,6 +782,10 @@ ul.navigation {
     .parent {
         position: relative;
     }
+    
+    .parent > a {
+        padding-right: 3 * $spacing-l;
+    }
 
     .sub-nav-toggle:after,
     [aria-haspopup="true"]:after {
@@ -794,7 +798,7 @@ ul.navigation {
         display: inline-block;
     }
 
-    .open .sub-nav-toggle:after,
+    .open > .sub-nav-toggle:after,
     [aria-haspopup="true"].open:after {
         transform: rotate(405deg);
     }
