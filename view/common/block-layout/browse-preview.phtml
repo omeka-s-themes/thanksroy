@@ -16,16 +16,10 @@ foreach ($this->resources as $resource):
     $body = $bodyTerm ? $resource->value($bodyTerm) : $resource->displayDescription();
 ?>
     <li class="<?php echo $this->resourceType; ?> resource">
-        <?php
-        if (in_array('thumbnail', $this->components)):
-            echo $resource->linkRaw($this->thumbnail($resource, 'medium', ['title' => $heading]), '', ['class' => 'thumbnail']);
-        endif;?>
+        <?php echo $resource->linkRaw($this->thumbnail($resource, 'medium', ['title' => $heading]), [], ['class' => 'thumbnail']); ?>
         <div class="resource-meta">
-            <h4><?php
-            if (in_array('resource-heading', $this->components)):
-                echo $resource->link($heading);
-            endif;?></h4>
-            <?php if (in_array('resource-body', $this->components) && $body): ?>
+            <h4><?php echo $resource->link($heading); ?></h4>
+            <?php if ($body): ?>
             <div class="description"><?php echo $body; ?></div>
             <?php endif; ?>
         </div>
