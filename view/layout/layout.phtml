@@ -76,14 +76,13 @@ $userBar = $this->userBar();
               header {
                 background:transparent url(<?php echo $themeHeaderBg; ?>) center left no-repeat;
               }
-              
-              @media screen and (min-width: 768px) {
+              <?php endif; ?> 
+
+              @media screen and (max-width: 768px) {
                   .sub-nav-toggle:after {
-                      color: <?php echo $linkColor; ?>
+                      color: <?php echo $buttonTextColor; ?>
                   }
               }
-              
-              <?php endif; ?> 
         </style>
     </head>
 

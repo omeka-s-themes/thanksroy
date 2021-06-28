@@ -1,31 +1,6 @@
 @import 'normalize';
 @import 'base';
 
-/* == Support == */
-
-$legacy-support-for-ie8: true;
-
-/* == Variables == */
-
-$base-font-size: 16px;
-$base-line-height: 24px;
-$relative-font-sizing: true;
-
-$spacing-unit: $base-line-height;
-
-$total-columns  : 16;
-$column-width   : 5em;
-$gutter-width   : 1em;
-$grid-padding   : $gutter-width;
-$break          : 48em 16;
-
-/* == Mixins == */
-
-@mixin body-copy {
-    line-height: $base-line-height;
-    margin-bottom: $spacing-unit;
-}
-
 // screen --------------------------------------------------------------------
 @media screen {
   @import "screen";
@@ -38,6 +13,6 @@ $break          : 48em 16;
 }
 
 // minimum 768px  ------------------------------------------------------------
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   @import "desktop";
 }

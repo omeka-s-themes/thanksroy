@@ -6,6 +6,12 @@ $susy: (
     global-box-sizing:                  border-box
 );
 
+// Typography
+
+$base-font-size: 16px;
+$base-line-height: 24px;
+$relative-font-sizing: true;
+
 // Colors
 
 $gray:                                  #ababab;
@@ -13,11 +19,6 @@ $bold:                                  darken($gray, 20%);
 $light:                                 lighten($gray, 20%);
 $bg:                                    lighten($gray, 30%);
 $link:                                  #920b0b;
-
-// Typography
-
-$base-font-size:                        20px;
-$base-line-height:                      30px;
 
 // Units
 
@@ -31,4 +32,24 @@ $spacing-l:                             $base-line-height;
     max-width: 1700px;
     margin-left: auto;
     margin-right: auto;
+}
+
+
+/* == Support == */
+
+$legacy-support-for-ie8: true;
+
+$spacing-unit: $base-line-height;
+
+$total-columns  : 16;
+$column-width   : 5em;
+$gutter-width   : 1em;
+$grid-padding   : $gutter-width;
+$break          : 48em 16;
+
+/* == Mixins == */
+
+@mixin body-copy {
+    line-height: $base-line-height;
+    margin-bottom: $spacing-unit;
 }

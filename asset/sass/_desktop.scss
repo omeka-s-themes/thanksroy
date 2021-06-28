@@ -9,12 +9,12 @@
 
 #content {
     width: 75%;
-    padding: $spacing-l;
+    padding: $spacing-unit;
 }
 
 #primary-nav {
     width: 25%;
-    padding: $spacing-l;
+    padding: $spacing-unit;
 }
 
 /* @end */
@@ -31,7 +31,8 @@ header {
 .button.menu-button { display: none; }
 
 #primary-nav {
-    margin-top: .75 * $spacing-l;
+    margin-top: .75 * $spacing-unit;
+    padding-right: 0;
 
     ul.navigation {
         display: block;
@@ -48,7 +49,7 @@ header {
 
     ul {
         margin-top: 0;
-        margin-bottom: 2 * $spacing-l;
+        margin-bottom: 2 * $spacing-unit;
     }
 
     li {
@@ -57,6 +58,14 @@ header {
         ul li { background-color: #fff; }
 
         ul li ul li { background-color: #fff; }
+    }
+
+    ul.navigation > li a {
+        padding: $spacing-m;
+    }
+    
+    ul.navigation ul li a {
+        padding-left: $spacing-unit;
     }
     
     a:link {
@@ -78,15 +87,15 @@ header {
 }
 
 #search {
-    margin: $spacing-l 0;
+    margin: $spacing-unit 0;
 }
 
 #search-form {
-    margin-bottom: $spacing-l;
+    margin-bottom: $spacing-unit;
 }
 
 #query {
-    margin-bottom: $spacing-l;
+    margin-bottom: $spacing-unit;
 }
 
 /* == Browse Items == */
@@ -104,7 +113,7 @@ header {
 
 .resource-meta:not(:only-child) {
     width: 60%;
-    padding-right: $spacing-l;
+    padding-right: $spacing-unit;
 }
 
 .resource-list a.thumbnail {
@@ -122,13 +131,13 @@ header {
     border-bottom:1px solid #ccc;
     width:100%;
     overflow: auto;
-    padding: (1 * $spacing-l) 0;
+    padding: (1 * $spacing-unit) 0;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
     
     .inputs {
-        width: calc(70% - #{.5 * $spacing-l});
+        width: calc(70% - #{.5 * $spacing-unit});
     }
 
     input, input[type=text], select {
@@ -137,7 +146,7 @@ header {
     }
 
     .field-meta {
-        width: calc(30% - #{.5 * $spacing-l});
+        width: calc(30% - #{.5 * $spacing-unit});
     }
 
     .columns.alpha label,
@@ -152,7 +161,7 @@ header {
 
 #advanced-search input[type="submit"] {
     float: right;
-    margin-top: $spacing-l;
+    margin-top: $spacing-unit;
 }
 
 #advanced-search .value:only-child .remove-value {
@@ -187,7 +196,7 @@ header {
 }
 
 .sitewide-search-form ~ .pagination {
-  margin: (1.25 * $spacing-l) 0 $spacing-l;
+  margin: (1.25 * $spacing-unit) 0 $spacing-unit;
   text-align: right;
   width: 50%;
   float: right;
