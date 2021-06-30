@@ -117,14 +117,15 @@ $userBar = $this->userBar();
             <div id="content" role="main" tabindex="-1">
                 <?php echo $this->content; ?>
             </div>
-            <footer>
-                <?php if ($footerContent = $this->themeSetting('footer')): ?>
-                <?php echo $footerContent; ?>
-                <?php else: ?>
-                    <?php echo $this->translate('Powered by Omeka S'); ?>
-                <?php endif; ?>
-            </footer>
+
         </div>
+        <footer>
+            <?php if ($footerContent = $this->themeSetting('footer')): ?>
+            <?php echo $footerContent; ?>
+            <?php else: ?>
+                <?php echo $this->translate('Powered by Omeka S'); ?>
+            <?php endif; ?>
+        </footer>
     <script type="text/javascript">
     jQuery(document).ready(function () {
         ThanksRoy.mobileMenu();
