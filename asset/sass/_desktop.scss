@@ -170,7 +170,7 @@ header {
 
 /* @end */
 
-/* $group ----- Pages ----- */
+/* @group ----- Pages ----- */
 
 .sub-menu {
     float: left;
@@ -205,4 +205,10 @@ header {
 .sitewide-search-form ~ .advanced-search {
   display: block;
   float: left;
+}
+
+/* ----- Content ----- */
+
+.resource-list .thumbnail {
+    margin-bottom: 0;
 }

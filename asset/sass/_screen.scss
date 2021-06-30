@@ -924,6 +924,8 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
 
   .thumbnail {
     margin-bottom: $spacing-unit;
+    display: inline-block;
+    border-bottom: 0;
   }
 }
 
