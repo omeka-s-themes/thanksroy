@@ -231,45 +231,6 @@ textarea {
   vertical-align: middle;
 }
 
-input[type="radio"],
-input[type="checkbox"] {
-  position: relative;
-  vertical-align: top;
-  top: 3px;
-  /* IE8, IE9, IE10 */
-  top: 0\0;
-  /* IE7 */
-  *top: -3px;
-  margin-right: 10px;
-}
-
-/* iPad */
-@media (-webkit-min-device-pixel-ratio: 1) and (max-device-width: 1024px) {
-  input[type="radio"],
-  input[type="checkbox"] {
-    vertical-align: baseline;
-    top: 2px;
-  }
-}
-
-/* iPhone 3 */
-@media (-webkit-min-device-pixel-ratio: 1) and (max-device-width: 480px) {
-  input[type="radio"],
-  input[type="checkbox"] {
-    vertical-align: baseline;
-    top: 0;
-  }
-}
-
-/* iPhone 4 */
-@media (-webkit-min-device-pixel-ratio: 2) and (max-device-width: 480px) {
-  input[type="radio"],
-  input[type="checkbox"] {
-    vertical-align: baseline;
-    top: 0;
-  }
-}
-
 .button, button,
 input[type="reset"],
 input[type="submit"],
@@ -284,16 +245,6 @@ input[type="button"] {
   overflow: visible;
   padding: 3px 10px;
   width: auto;
-
-  /* IE7 */
-  *padding-top: 2px;
-  *padding-bottom: 0px;
-}
-
-button {
-  /* IE7 */
-  *padding-top: 1px;
-  *padding-bottom: 1px;
 }
 
 textarea,
@@ -327,17 +278,8 @@ input[type="week"] {
   outline: 0;
   padding: 3px 10px;
   font-size: $base-font-size;
-  /*
-    Leaving out Helvetica Neue, to not throw off size="..."
-    on inputs. Arial is more reliable, on Windows and OS X.
-  */
   font-family: "PT Serif", serif;
   height: 1.8em;
-
-  /* IE7 */
-  *padding-top: 2px;
-  *padding-bottom: 1px;
-  *height: auto;
 }
 
 /*
@@ -503,18 +445,19 @@ fieldset {
 
 .multi-value.field .field-meta {
     padding-right: 2 * $spacing-unit;
+    min-height: 1.5 * $spacing-unit;
     position: relative;
     
     .add-value {
         position: absolute;
         top: 0;
-        right: 0;
+        right: $spacing-s;
         width: $spacing-unit;
     }
 }
 
 .field-meta {
-    margin-bottom: $spacing-m;
+    margin: $spacing-s 0;
 }
 
 .field-meta label,
@@ -538,15 +481,19 @@ fieldset {
 
 #advanced-search {
     margin: $spacing-unit 0;
-  
-    input, select {
-        width: 100%;
-        display: block;
+
+    button,
+    a.button {
+        border: 1px solid #000;
     }
 
+    input, 
+    select,
     .search-entry select,
     .search-entry input[type="text"] {
-        width: 100%;
+        padding-top: .25 * $spacing-unit;
+        padding-bottom: .25 * $spacing-unit;
+        height: auto;
         display: block;
     }
 
@@ -576,7 +523,7 @@ fieldset {
         border-bottom:1px solid $gray;
         width:100%;
         overflow: auto;
-        padding: $spacing-unit 0;
+        padding: $spacing-m 0;
         margin-bottom: 0;
         
         .remove-value {
@@ -584,13 +531,33 @@ fieldset {
         }
 
         .value {
-            margin-bottom: $spacing-unit;
+            margin-bottom: $spacing-m;
         }
         
         .value:last-child {
             margin-bottom: 0;
         }
     }
+
+    [name*="sort_"] {
+        width: auto;
+        display: inline-block;
+    }
+}
+
+#advanced-search input[type="submit"] {
+    margin-top: $spacing-unit;
+}
+
+#advanced-search .inputs select, 
+#advanced-search .inputs .button,
+#advanced-search .inputs button,
+#advanced-search .inputs input {
+    margin: $spacing-s $spacing-s $spacing-s 0;
+}
+
+#advanced-search .value:only-child .remove-value {
+    display: none;
 }
 
 ul.items-list, ul.collections-list, ul.title-list {

@@ -140,11 +140,6 @@ header {
         width: calc(70% - #{.5 * $spacing-unit});
     }
 
-    input, input[type=text], select {
-        width: 100%;
-        float: right;
-    }
-
     .field-meta {
         width: calc(30% - #{.5 * $spacing-unit});
     }
@@ -153,19 +148,6 @@ header {
     .columns.alpha .label {
         width: 100%;
     }
-}
-
-/* @end */
-
-/* @group ----- Advanced Search Form ----- */
-
-#advanced-search input[type="submit"] {
-    float: right;
-    margin-top: $spacing-unit;
-}
-
-#advanced-search .value:only-child .remove-value {
-    display: none;
 }
 
 /* @end */
