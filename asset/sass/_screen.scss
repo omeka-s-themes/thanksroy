@@ -532,6 +532,7 @@ fieldset {
 
         .value {
             margin-bottom: $spacing-m;
+            flex-wrap: wrap;
         }
         
         .value:last-child {
@@ -547,13 +548,6 @@ fieldset {
 
 #advanced-search input[type="submit"] {
     margin-top: $spacing-unit;
-}
-
-#advanced-search .inputs select, 
-#advanced-search .inputs .button,
-#advanced-search .inputs button,
-#advanced-search .inputs input {
-    margin: $spacing-s $spacing-s $spacing-s 0;
 }
 
 #advanced-search .value:only-child .remove-value {
