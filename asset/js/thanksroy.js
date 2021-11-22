@@ -43,8 +43,6 @@ if (!Omeka) {
         $.extend(menuOptions, customMenuOptions);
 
         $(menuSelector).accessibleMegaMenu(menuOptions);
-        
-        console.log('applied megamenu');
     };
 
     ThanksRoy.mobileMenu = function() {
