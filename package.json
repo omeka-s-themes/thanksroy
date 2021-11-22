@@ -1,6 +1,6 @@
 {
   "name": "thanksroy",
-  "version": "1.0",
+  "version": "1.0.1",
   "description": "Thanks Roy theme for Omeka S.",
   "main": "gulpfile.js",
   "scripts": {
@@ -24,7 +24,7 @@
     "autoprefixer": "^9.2.1",
     "gulp": "^4.0.2",
     "gulp-postcss": "^8.0.0",
-    "gulp-sass": "^4.0.2"
+    "gulp-sass": "^5.0.0"
   },
   "browserslist": [
     "> 5%",
