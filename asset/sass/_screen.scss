@@ -847,9 +847,44 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
 
 /* @group ----- Content ----- */
 
+.expand:after,
+.collapse:after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+
+.expand:after {
+    content: "\f0da";
+}
+
+.collapse:after {
+    content: "\f0d7";
+}
+
+.collapsible {
+    display: none;
+}
+
+.collapse + .collapsible {
+    display: block;
+    padding-left: $spacing-unit;
+    margin: $spacing-unit 0;
+    width: 100%;
+    border-left: 1px solid $gray;
+
+    h4 {
+        font-size: $base-font-size;
+        line-height: $base-line-height;
+    }
+}
+
 .property {
     margin-bottom: $spacing-unit;
     
+    &:last-child {
+        margin-bottom: 0;
+    }
+
     h4 {
         margin-bottom: 0;
     }
@@ -859,17 +894,54 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
         margin-bottom: $spacing-s;
         border-bottom: 1px solid $gray;
     }
-    
+
+    .value,
+    .resource-link {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+    }
+ 
     .value:last-child {
         padding-bottom: 0;
         margin-bottom: 0;
         border-bottom: 0;
     }
-    
+
+    .value-content:not(:only-child),
+    .language,
+    .resource-link img {
+        margin-right: $spacing-s;
+    }
+
     .language {
         background-color: #000;
         color: #fff;
         padding: 0 $spacing-s;
+    }
+
+    .resource-link img {
+        width: 2 * $spacing-unit;
+        height: auto;
+        padding: .5 * $spacing-s;
+        border: 1px solid #000;
+        margin-bottom: 0;
+    }
+
+    .resource-link,
+    .expand,
+    .collapse {
+        border-bottom: 0;
+    }
+
+    .resource-link .resource-name {
+        border-bottom: 1px dotted;
+    }
+
+    .resource-link .resource-name,
+    .expand,
+    .collapse {
+        align-self: center;
     }
 }
 
