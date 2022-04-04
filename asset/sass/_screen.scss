@@ -44,6 +44,9 @@ h6 {
     font-style:italic;
 }
 
+*:focus {
+    z-index: 10;
+}
 
 a {
     border-bottom: 1px dotted;
@@ -127,6 +130,7 @@ blockquote {
 
 #content {
     padding: 0 $spacing-unit;
+    outline: none;
 }
 
 /* @end */
@@ -1313,6 +1317,14 @@ input[type="button"],
 }
 
 /* @end */
+
+/* @group ----- Page Blocks ----- */
+
+.list-of-sites .site-list .site {
+    overflow: visible;
+    float: left;
+    width: 100%;
+}
 
 /* @group ----- Other Plugins ----- */
 
