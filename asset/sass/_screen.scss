@@ -922,6 +922,7 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
         background-color: #000;
         color: #fff;
         padding: 0 $spacing-s;
+        align-self: flex-start;
     }
 
     .resource-link img {
