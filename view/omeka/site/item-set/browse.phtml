@@ -24,8 +24,8 @@ foreach ($itemSets as $itemSet):
     $body = $bodyTerm ? $itemSet->value($bodyTerm) : $itemSet->displayDescription();
 ?>
     <li class="item-set resource">
-        <?php if($itemSetThumbnail = $this->thumbnail($itemSet, 'medium')): ?>
-        <?php echo $itemSet->linkRaw($itemSetThumbnail, null, ['class' => 'thumbnail']); ?>
+        <?php if($itemSetThumbnail = $this->thumbnail($itemSet, 'medium', ['alt' => ''])): ?>
+        <?php echo $itemSet->linkRaw($itemSetThumbnail, null, ['class' => 'thumbnail', 'aria-hidden' => 'true', 'tabindex' => '-1']); ?>
         <?php endif; ?>
         <div class="resource-meta">
             <h4><?php echo $itemSet->link($heading); ?></h4>

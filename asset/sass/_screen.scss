@@ -957,6 +957,12 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
   padding-left: 0;
   clear: both;
 
+  .resource-title {
+    font-size: 1.25 * $base-font-size;
+    line-height: 1.25 * $base-line-height;
+    font-weight: bold;
+  }
+
   .resource {
     overflow:hidden;
     border-top:1px solid $gray;
