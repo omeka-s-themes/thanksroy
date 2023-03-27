@@ -755,6 +755,7 @@ ul.navigation {
     .sub-nav-toggle:after,
     [aria-haspopup="true"]:after {
         font-family: "Font Awesome 5 Free";
+        font-weight: 900;
         content: "\f055";
         font-size: 14px;
         float: right;
@@ -1114,6 +1115,7 @@ footer {
 
         &:after {
             font-family: "Font Awesome 5 Free";
+            font-weight: 900;
             content: "\f002";
             text-indent: 0;
             position: absolute;
