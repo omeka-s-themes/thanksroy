@@ -739,7 +739,7 @@ ul.navigation {
             padding: ($spacing-m) $spacing-unit;
 
             &:focus {
-              border: 1px dotted $gray;
+              outline: 1px dotted;
             }
         }
     }
