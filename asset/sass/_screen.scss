@@ -752,6 +752,10 @@ ul.navigation {
         padding-right: $spacing-unit;
     }
 
+    .active li a {
+        font-weight: normal;
+    }
+
     .sub-nav-toggle:after,
     [aria-haspopup="true"]:after {
         font-family: "Font Awesome 5 Free";
