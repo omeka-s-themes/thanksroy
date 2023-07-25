@@ -12,9 +12,14 @@ $escape = $this->plugin('escapeHtml');
 <?php
 $headingTerm = $this->siteSetting('browse_heading_property_term');
 $bodyTerm = $this->siteSetting('browse_body_property_term');
+
+$filterLocale = (bool) $this->siteSetting('filter_locale_values');
+$lang = $this->lang();
+$valueLang = $filterLocale ? [$lang, ''] : null;
+
 foreach ($this->resources as $resource):
-    $heading = $headingTerm ? $resource->value($headingTerm, ['default' => $translate('[Untitled]')]) : $resource->displayTitle();
-    $body = $bodyTerm ? $resource->value($bodyTerm) : $resource->displayDescription();
+    $heading = $headingTerm ? $resource->value($headingTerm, ['default' => $translate('[Untitled]'), 'lang' => $valueLang]) : $resource->displayTitle(null, $valueLang);
+    $body = $bodyTerm ? $resource->value($bodyTerm, ['lang' => $valueLang]) : $resource->displayDescription(null, $valueLang);
 ?>
     <li class="<?php echo $this->resourceType; ?> resource">
         <?php echo $resource->linkRaw($this->thumbnail($resource, 'medium', ['title' => $heading]), [], ['class' => 'thumbnail']); ?>
