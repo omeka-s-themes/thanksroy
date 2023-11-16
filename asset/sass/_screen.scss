@@ -1,5 +1,27 @@
 /* @group ----- Generic styles ----- */
 
+@mixin resource-link {
+    display: flex;
+    align-items: center;
+    border-bottom: 0;
+
+    .resource-name {
+        border-bottom: 1px dotted;
+    }
+
+    img {
+        width: 2 * $spacing-unit;
+        height: auto;
+        padding: .5 * $spacing-s;
+        border: 1px solid #000;
+        margin: 0 (.25 * $spacing-unit) 0 0;
+    }
+}
+
+/* @end */
+
+/* @group ----- Generic styles ----- */
+
 * { box-sizing: border-box; }
 
 body {
@@ -879,9 +901,7 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
 
     .value,
     .resource-link {
-        display: flex;
-        flex-wrap: wrap;
-        align-content: center;
+        @include resource-link();
     }
  
     .value:last-child {
@@ -901,14 +921,6 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
         color: #fff;
         padding: 0 $spacing-s;
         align-self: flex-start;
-    }
-
-    .resource-link img {
-        width: 2 * $spacing-unit;
-        height: auto;
-        padding: .5 * $spacing-s;
-        border: 1px solid #000;
-        margin-bottom: 0;
     }
 
     .resource-link,
@@ -1161,6 +1173,7 @@ footer {
     padding: ($spacing-m);
 }
 
+.results .image,
 #search-results .image {
     margin: 0 ($spacing-m) 0 0;
 }
@@ -1217,6 +1230,10 @@ footer {
 .results > a:last-child {
    margin-top: (-$spacing-m);
  }
+
+.results .resource-link {
+    @include resource-link();
+}
 
 .pagination + .results {
   margin: $spacing-unit 0 0;
