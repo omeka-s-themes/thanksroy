@@ -1311,4 +1311,8 @@ input[type="button"],
     height: auto;
 }
 
+.faceted-browse-page .resource-link {
+    @include resource-link();
+}
+
 /* @end */
