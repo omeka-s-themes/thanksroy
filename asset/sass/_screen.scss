@@ -6,7 +6,7 @@
     border-bottom: 0;
 
     .resource-name {
-        border-bottom: 1px dotted;
+        text-decoration: dotted underline;
     }
 
     img {
@@ -1320,6 +1320,18 @@ input[type="button"],
 
 .faceted-browse-page .resource-link {
     @include resource-link();
+}
+
+.browse-controls .button {
+    display: inline-block;
+}
+
+table.tablesaw {
+    border: 1px solid $gray;
+}
+
+table.tablesaw td {
+    height: 1.5 * $spacing-unit;
 }
 
 /* @end */
