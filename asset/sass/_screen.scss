@@ -26,7 +26,6 @@
 
 body {
     font-family: "PT Serif", Times, serif;
-    word-break: break-word;
     font-size: $base-font-size;
     line-height: $base-line-height;
 }
@@ -1015,6 +1014,10 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
     color: #fff;
 }
 
+.linked-resource .resource-link {
+    @include resource-link();
+}
+
 .browse .collection {
     clear: both;
     border-top: 1px solid $gray;
@@ -1309,6 +1312,10 @@ input[type="button"],
 
 #recaptcha_area input {
     height: auto;
+}
+
+.faceted-browse-page #container {
+    flex-wrap: wrap;
 }
 
 .faceted-browse-page .resource-link {
