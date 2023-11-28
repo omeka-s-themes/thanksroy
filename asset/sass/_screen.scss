@@ -1318,6 +1318,14 @@ input[type="button"],
     flex-wrap: wrap;
 }
 
+.faceted-browse-page .tablesaw td {
+    border-color: $gray;
+}
+
+.faceted-browse-page button .close-glyph {
+    color: #000;
+}
+
 .faceted-browse-page .resource-link {
     @include resource-link();
 }
