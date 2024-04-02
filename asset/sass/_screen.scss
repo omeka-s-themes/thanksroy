@@ -791,21 +791,29 @@ ul.navigation {
 
     form {
         margin-right: $spacing-m;
+        display: inline-flex;
+        flex-wrap: wrap;
+        align-items: center;
     }
 
     input[type=text] {
-        width: 5em;
+        width: 4rem;
         margin-right: 5px;
         vertical-align: top;
         border: 1px solid;
+        text-align: right;
     }
 
     .inactive {
         opacity: .5;
     }
 
-    .next.button {
-        margin-right: $spacing-s;
+    .pagination-buttons {
+        margin-right: $spacing-m;
+    }
+
+    .button {
+        display: inline-block;
     }
 }
 
