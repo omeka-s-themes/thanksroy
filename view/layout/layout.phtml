@@ -73,9 +73,11 @@ $userBar = $this->userBar();
                 
         
               <?php if ($themeHeaderBg = $this->themeSettingAssetUrl('header_bg')): ?>
-              header {
-                background:transparent url(<?php echo $themeHeaderBg; ?>) center left no-repeat;
-              }
+                <?php $themeHeaderBgPosition = $this->themeSetting('banner_position'); ?>
+                header {
+                    background:transparent url(<?php echo $themeHeaderBg; ?>) no-repeat;
+                    background-position: left <?php echo ($themeHeaderBgPosition) ? $themeHeaderBgPosition : 'center'; ?>;
+                }
               <?php endif; ?> 
 
               @media screen and (max-width: 768px) {
