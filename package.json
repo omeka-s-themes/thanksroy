@@ -1,6 +1,6 @@
 {
   "name": "thanksroy",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "Thanks Roy theme for Omeka S.",
   "main": "gulpfile.js",
   "scripts": {
@@ -14,7 +14,7 @@
     "omeka-s",
     "theme"
   ],
-  "author": "RRCHNM",
+  "author": "Omeka Team",
   "license": "GPL-3.0",
   "bugs": {
     "url": "https://github.com/omeka-s-themes/thanksroy/issues"
