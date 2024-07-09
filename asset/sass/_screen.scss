@@ -625,12 +625,12 @@ header h1 {
     margin-bottom: 0;
 }
 
-.site-title {
+a.site-title {
     font-size: 2 * $base-font-size;
     padding: $spacing-unit;
     border-bottom: 0;
     display: block;
-    color: #000;
+    color: var(--site-title-color) !important;
 
     img {
         vertical-align: bottom;
@@ -1274,7 +1274,8 @@ footer {
 /* @group ----- Colors ----- */
 
 body {
-    color:#444;
+    color: var(--text-color);
+    background-color: var(--background-color);
 }
 
 header {
@@ -1292,11 +1293,13 @@ header {
 }
 
 a {
-    &:link { color: #4f6780; }
+    &:link { color: $link; }
 
-    &:hover
+    &:visited { color: var(--visited-link-color); }
+
+    &:hover,
     &:active { 
-        color: #3763a6; 
+        color: var(--active-link-color); 
     }
 }
 
@@ -1306,8 +1309,8 @@ input[type="submit"],
 input[type="button"],
 .pagination_next a,
 .pagination_previous a {
-  background-color: #000;
-  color: #fff;
+  background-color: var(--button-color);
+  color: var(--button-text-color)
 }
 
 /* @end */

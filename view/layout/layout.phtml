@@ -27,49 +27,16 @@ $userBar = $this->userBar();
         <?php echo $this->headScript(); ?>
         
         <style>
-           <?php
-            ($backgroundColor = $this->themeSetting('background_color')) || ($backgroundColor = "#FFFFFF");
-            ($textColor = $this->themeSetting('text_color')) || ($textColor = "#444444");
-            ($linkColor = $this->themeSetting('link_color')) || ($linkColor = "#4f6780");
-            ($visitedLinkColor = $this->themeSetting('visited_link_color')) || ($visitedLinkColor = "#4f6780");
-            ($activeLinkColor = $this->themeSetting('active_link_color')) || ($activeLinkColor = "#3763a6");
-            ($buttonColor = $this->themeSetting('button_bg_color')) || ($buttonColor = "#000000");
-            ($buttonTextColor = $this->themeSetting('button_text_color')) || ($buttonTextColor = "#FFFFFF");
-            ($titleColor = $this->themeSetting('site_title_color')) || ($titleColor = "#000000");
-            ?>
-                body {
-                    background-color: <?php echo $backgroundColor; ?>;
-                    color: <?php echo $textColor; ?>;
-                }
-
-                a.site-title:link, a.site-title:visited,
-                a.site-title:active, a.site-title:hover,
-                .sub-nav-toggle:after {
-                    color: <?php echo $titleColor; ?>;
-                    <?php if ($this->themeSetting('header_background')): ?>
-                    text-shadow: 0px 0px 20px #000;
-                    <?php endif; ?>
-                }
-
-                a:link {
-                    color: <?php echo $linkColor; ?>;
-                }
-                a:visited {
-                    color: <?php echo $visitedLinkColor; ?>;
-                }
-                a:hover, a:active, a:focus {
-                    color: <?php echo $activeLinkColor; ?>;
-                }
-                
-        
-                .button, button,
-                input[type="reset"],
-                input[type="submit"],
-                input[type="button"] {
-                  background-color: <?php echo $buttonColor; ?>;
-                  color: <?php echo $buttonTextColor; ?> !important;
-                }                
-                
+            :root {
+                --background-color: <?php echo ($backgroundColor = $this->themeSetting('background_color')) ? $backgroundColor : "#FFFFFF"; ?>;
+                --text-color: <?php echo ($textColor = $this->themeSetting('text_color')) ? $textColor : "#444444"; ?>;
+                --link-color: <?php echo ($linkColor = $this->themeSetting('link_color')) ? $linkColor : "#4f6780"; ?>;
+                --visited-link-color: <?php echo ($visitedLinkColor = $this->themeSetting('visited_link_color')) ? $visitedLinkColor : "#4f6780"; ?>;
+                --active-link-color: <?php echo ($activeLinkColor = $this->themeSetting('active_link_color')) ? $activeLinkColor : "#3763a6"; ?>;
+                --button-color: <?php echo ($buttonColor = $this->themeSetting('button_color')) ? $buttonColor : "#000000"; ?>;
+                --button-text-color: <?php echo ($buttonColor = $this->themeSetting('button_text_color')) ? $buttonTextColor : "#FFFFFF"; ?>;
+                --title-color: <?php echo ($titleColor = $this->themeSetting('site_title_color')) ? $titleColor : "#000000"; ?>;
+            }
         
               <?php if ($themeHeaderBg = $this->themeSettingAssetUrl('header_bg')): ?>
                 <?php $themeHeaderBgPosition = $this->themeSetting('banner_position'); ?>
@@ -78,12 +45,6 @@ $userBar = $this->userBar();
                     background-position: left <?php echo ($themeHeaderBgPosition) ? $themeHeaderBgPosition : 'center'; ?>;
                 }
               <?php endif; ?> 
-
-              @media screen and (max-width: 768px) {
-                  .sub-nav-toggle:after {
-                      color: <?php echo $buttonTextColor; ?>
-                  }
-              }
         </style>
     </head>
 
