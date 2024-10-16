@@ -908,6 +908,7 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
         padding-bottom: $spacing-s;
         margin: 0 0 $spacing-s;
         border-bottom: 1px solid $gray;
+        flex-wrap: wrap
     }
 
     .value,
