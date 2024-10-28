@@ -281,13 +281,14 @@ input[type="week"] {
   box-sizing: border-box;
   background-clip: padding-box;
   background-color: #fff;
-  border: 1px solid #000;
+  border: 0;
+  box-shadow: 0 0 0 1px #000 inset;
   color: #000;
   outline: 0;
   padding: 3px 10px;
   font-size: $base-font-size;
+  line-height: $base-line-height;
   font-family: "PT Serif", serif;
-  height: 1.8em;
 }
 
 /*
@@ -476,18 +477,10 @@ fieldset {
 #advanced-search {
     margin: $spacing-unit 0;
 
-    button,
-    a.button {
-        border: 1px solid #000;
-    }
-
     input, 
     select,
     .search-entry select,
     .search-entry input[type="text"] {
-        padding-top: .25 * $spacing-unit;
-        padding-bottom: .25 * $spacing-unit;
-        height: auto;
         display: block;
     }
 
@@ -791,7 +784,6 @@ ul.navigation {
         width: 4rem;
         margin-right: 5px;
         vertical-align: top;
-        border: 1px solid;
         text-align: right;
     }
 
@@ -1135,7 +1127,6 @@ footer {
 
     input[type=text] {
         width: 100%;
-        border: 1px solid #000;
         padding: 5px 40px 5px 10px;
     }
 }
@@ -1302,7 +1293,9 @@ a {
     }
 }
 
-.button, button,
+.button, 
+a.button,
+button,
 input[type="reset"],
 input[type="submit"],
 input[type="button"],
