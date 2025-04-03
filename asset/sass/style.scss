@@ -6,12 +6,6 @@
   @import "screen";
 }
 
-// maximum 768px  ------------------------------------------------------------
-
-@media screen and (max-width: 768px) {
-  @import "mobile-only";
-}
-
 // minimum 768px  ------------------------------------------------------------
 @media screen and (min-width: 769px) {
   @import "desktop";

@@ -165,6 +165,8 @@ blockquote {
     border: 1px solid $gray;
     padding: (($spacing-s) - 1px);
     background-color: #fff;
+    float: right;
+    margin-left: $spacing-l;
 }
 
 .item-set .image {
@@ -319,6 +321,7 @@ textarea.placeholder_text {
   box-shadow: none;
 }
 
+a:focus,
 button:focus,
 button:active,
 input:focus,
@@ -327,7 +330,7 @@ select:focus,
 select:active,
 textarea:focus,
 textarea:active {
-  box-shadow: #333 0 0 7px;
+  outline: 1px dotted;
 }
 
 input[type="file"]:focus,
@@ -759,6 +762,7 @@ ul.navigation {
         right: 0;
         height: (2 * $spacing-unit);
         width: (2 * $spacing-unit);
+        background: transparent;
 
         &:after {
             float: none;
@@ -953,14 +957,14 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
   padding-left: 0;
   clear: both;
 
-  .resource-title {
+  .resource-name {
     font-size: 1.25 * $base-font-size;
     line-height: 1.25 * $base-line-height;
     font-weight: bold;
   }
 
   .resource {
-    overflow:hidden;
+    display: flow-root;
     border-top:1px solid $gray;
     padding: $spacing-unit 0;
   }
