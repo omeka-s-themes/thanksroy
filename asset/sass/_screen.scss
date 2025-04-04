@@ -328,8 +328,12 @@ input:active,
 select:focus,
 select:active,
 textarea:focus,
-textarea:active {
-  outline: 1px dotted;
+textarea:active,
+button:focus-visible, 
+[type="button"]:focus-visible, 
+[type="reset"]:focus-visible, 
+[type="submit"]:focus-visible {
+  outline: 1px solid var(--link-color);
 }
 
 input[type="file"]:focus,
@@ -723,7 +727,7 @@ ul.navigation {
             padding: ($spacing-m) $spacing-unit;
 
             &:focus {
-              outline: 1px dotted;
+              outline: 1px solid var(--link-color);
               position: relative;
               z-index: 100;
             }
