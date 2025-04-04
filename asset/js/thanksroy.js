@@ -7,53 +7,34 @@ if (!Omeka) {
 }
 
 (function($) {
+    ThanksRoy.mobileMenu = function() {
+        var subNavId = 0;
+        var subnavToggleLabel = Omeka.jsTranslate('Toggle subnavigation');
 
-    ThanksRoy.megaMenu = function (menuSelector, customMenuOptions) {
-        if (typeof menuSelector === 'undefined') {
-            menuSelector = '#primary-nav';
+        var activateToggle = function(toggleButton, menu) {
+            menu.toggleClass('open');
+            if (menu.hasClass('open')) {
+                toggleButton.attr('aria-expanded', 'true');
+            } else {
+                toggleButton.attr('aria-expanded', 'false');
+            }
         }
 
-        var menuOptions = {
-            /* prefix for generated unique id attributes, which are required
-             to indicate aria-owns, aria-controls and aria-labelledby */
-            uuidPrefix: "accessible-megamenu",
-
-            /* css class used to define the megamenu styling */
-            menuClass: "nav-menu",
-
-            /* css class for a top-level navigation item in the megamenu */
-            topNavItemClass: "nav-item",
-
-            /* css class for a megamenu panel */
-            panelClass: "sub-nav",
-
-            /* css class for a group of items within a megamenu panel */
-            panelGroupClass: "sub-nav-group",
-
-            /* css class for the hover state */
-            hoverClass: "hover",
-
-            /* css class for the focus state */
-            focusClass: "focus",
-
-            /* css class for the open state */
-            openClass: "open"
-        };
-
-        $.extend(menuOptions, customMenuOptions);
-
-        $(menuSelector).accessibleMegaMenu(menuOptions);
-    };
-
-    ThanksRoy.mobileMenu = function() {
         $('#primary-nav li ul').each(function() {
             var childMenu = $(this);
-            var subnavToggle = $('<button type="button" class="sub-nav-toggle" aria-label="Show subnavigation"></button>');
-            subnavToggle.click(function() {
-                $(this).parent('.parent').toggleClass('open');
-            });
+            var childMenuId = 'sub-nav-' + subNavId;
+            var subnavToggle = $('<button type="button" class="sub-nav-toggle" aria-expanded="false"></button>');
+
             childMenu.parent().addClass('parent');
-            childMenu.addClass('sub-nav').before(subnavToggle);
+            childMenu.attr('id', childMenuId).addClass('sub-nav').before(subnavToggle);
+            subnavToggle.attr('aria-controls', childMenuId).attr('aria-label', subnavToggleLabel).attr('title', subnavToggleLabel);
+            subNavId++;
+        });
+
+        $('#primary-nav').on('click', '.sub-nav-toggle', function() {
+            var subNavToggle = $(this);
+            var parentMenu = subNavToggle.parent();
+            activateToggle(subNavToggle, parentMenu);
         });
 
         if ($('.sub-nav .active').length > 0) {
@@ -61,9 +42,10 @@ if (!Omeka) {
             parentToggle.click();
         }
 
-        $('.menu-button').click( function(e) {
-            e.preventDefault();
-            $('#primary-nav ul.navigation').toggleClass('open');
+        $('#primary-nav ul.navigation').attr('id', 'main-nav');
+
+        $('#primary-nav').on('click', '#mobile-nav-toggle', function() {
+            activateToggle($(this), $('main-nav'));
         });
     };
 })(jQuery);

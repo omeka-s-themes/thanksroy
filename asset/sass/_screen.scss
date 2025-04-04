@@ -135,7 +135,6 @@ blockquote {
     height:auto;
     width:auto;
     padding:.5em;
-    border:1px blue dashed;
 }
 
 #content {
@@ -656,16 +655,18 @@ ul.navigation {
     padding: ($spacing-m) $spacing-unit;
     display: block;
     text-transform: uppercase;
+    width: 100%;
+    text-align: left;
 }
 
-.button.menu-button:after {
-    content: "";
+.button.menu-button:before {
+    content: "\f0c9";
     display: inline-block;
     width: 12px;
     height: 12px;
-    background-image: url('../images/menu.png');
-    background-size: contain;
-    margin-left: 10px;
+    margin-right: 10px;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
 }
 
 #primary-nav ul.navigation {
@@ -704,13 +705,13 @@ ul.navigation {
         top: 0;
         left: 0;
         width: 100%;
-        overflow: hidden;
     }
 
     & > li {
         padding: 0;
         list-style-type: none;
         width: 100%;
+        position: relative;
 
         @media screen and (max-width: $break) {
             padding: 0;
@@ -723,6 +724,8 @@ ul.navigation {
 
             &:focus {
               outline: 1px dotted;
+              position: relative;
+              z-index: 100;
             }
         }
     }

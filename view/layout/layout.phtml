@@ -45,8 +45,8 @@ $userBar = $this->userBar();
         </header>
         <div id="wrap">
             <nav id="primary-nav">
-                <div class="menu-button button">Menu</div>
-                <?php echo $site->publicNav()->menu()->setPartial('common/accessible-mega-menu.phtml')->renderPartial(); ?>
+                <button type="button" id="mobile-nav-toggle" class="menu-button button" aria-controls="main-nav" aria-expanded="false"><?php echo $this->translate('Menu'); ?></button>
+                <?php echo $site->publicNav()->menu(); ?>
                 <div id="search">
                     <?php echo $this->partial('common/search-form'); ?>
                 </div>
@@ -67,7 +67,6 @@ $userBar = $this->userBar();
     <script type="text/javascript">
     jQuery(document).ready(function () {
         ThanksRoy.mobileMenu();
-        ThanksRoy.megaMenu('.no-touchevents #primary-nav');
     });
     </script>
     </body>
