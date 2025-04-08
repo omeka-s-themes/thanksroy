@@ -45,7 +45,7 @@ if (!Omeka) {
         $('#primary-nav ul.navigation').attr('id', 'main-nav');
 
         $('#primary-nav').on('click', '#mobile-nav-toggle', function() {
-            activateToggle($(this), $('main-nav'));
+            activateToggle($(this), $('#main-nav'));
         });
     };
 })(jQuery);
