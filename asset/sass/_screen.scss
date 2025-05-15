@@ -620,6 +620,9 @@ header {
 
 header h1 {
     margin-bottom: 0;
+    display: flex;
+    max-height: 100%;
+    line-height: 1;
 }
 
 a.site-title {
@@ -630,9 +633,9 @@ a.site-title {
     color: var(--site-title-color) !important;
 
     img {
-        vertical-align: bottom;
-        max-width: 100%;
-        height: auto;
+        vertical-align: top;
+        max-height: 100%;
+        width: auto;
     }
 }
 
@@ -1283,13 +1286,15 @@ header {
     border-color: #000;
     display: flex;
     align-items: center;
+    height: 5 * $spacing-unit;
 
     &.medium {
-        min-height: 7 * $spacing-unit;
+        height: 7 * $spacing-unit;
     }
     
     &.tall {
         min-height: 10 * $spacing-unit;
+        height: auto;
     }
 }
 
