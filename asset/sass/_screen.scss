@@ -772,12 +772,15 @@ ul.navigation {
         height: (2 * $spacing-unit);
         width: (2 * $spacing-unit);
         background: transparent;
+        color: var(--text-color);
+
 
         &:after {
             float: none;
             text-align: center;
         }
     }
+
 }
 
 .pagination {
