@@ -159,7 +159,7 @@ blockquote {
 }
 
 .resource-list img,
-.media-list img {
+.media-list:not(#itemfiles) img {
     height: 100%;
     border: 1px solid $gray;
     padding: (($spacing-s) - 1px);
