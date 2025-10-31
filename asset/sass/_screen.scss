@@ -93,7 +93,7 @@ dd { margin-left:1.3333em; }
 
 table {
     width:100%;
-    border: 1px solid $gray;
+    border: 1px solid var(--gray);
     border-width: 1px 1px 0 0;
     margin-bottom:1.3333em;
     border-collapse: collapse;
@@ -105,7 +105,7 @@ th {
 }
 
 th, td {
-    border: solid $gray;
+    border: solid var(--gray);
     border-width: 0 0 1px 1px;
     padding: 4px;
 }
@@ -161,7 +161,7 @@ blockquote {
 .resource-list img,
 .media-list:not(#itemfiles) img {
     height: 100%;
-    border: 1px solid $gray;
+    border: 1px solid var(--gray);
     padding: (($spacing-s) - 1px);
     background-color: #fff;
     float: right;
@@ -513,7 +513,7 @@ fieldset {
     }
 
     .field {
-        border-bottom:1px solid $gray;
+        border-bottom:1px solid var(--gray);
         width:100%;
         overflow: auto;
         padding: $spacing-m 0;
@@ -600,7 +600,7 @@ div.error {
   position: fixed;
   top: $spacing-unit;
   left: 50%;
-  border: 1px solid $gray;
+  border: 1px solid var(--gray);
   transform: translateX(-50%);
   z-index: -5;
   padding: $spacing-s;
@@ -651,7 +651,7 @@ ul.navigation {
 }
 
 .top ul {
-    border: solid $gray;
+    border: solid var(--gray);
     border-width: 0 0 1px 0;
 }
 
@@ -677,7 +677,7 @@ ul.navigation {
 }
 
 #primary-nav ul.navigation {
-    border-top: 1px solid $gray;
+    border-top: 1px solid var(--gray);
     position: relative;
     display: none;
     margin-top: 0;
@@ -725,7 +725,7 @@ ul.navigation {
         }
 
         a {
-            border-bottom: 1px solid $gray;
+            border-bottom: 1px solid var(--gray);
             display:block;
             padding: ($spacing-m) $spacing-unit;
 
@@ -823,7 +823,7 @@ nav.pagination:nth-of-type(3), #content > .pagination:nth-of-type(2) {
 }
 
 nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
-    border-top: 1px solid $gray;
+    border-top: 1px solid var(--gray);
     border-bottom: 0;
     padding-top: $spacing-unit;
     margin: 0 0 $spacing-unit 0;
@@ -838,7 +838,7 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
 }
 
 .site-page-pagination {
-    border-top: 1px solid $gray;
+    border-top: 1px solid var(--gray);
     margin: 0 0 $spacing-unit 0;
     display: flex;
     justify-content: space-between;
@@ -891,7 +891,7 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
     padding-left: $spacing-unit;
     margin: $spacing-unit 0;
     width: 100%;
-    border-left: 1px solid $gray;
+    border-left: 1px solid var(--gray);
 
     h4 {
         font-size: $base-font-size;
@@ -916,7 +916,7 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
     dd.value {
         padding-bottom: $spacing-s;
         margin: 0 0 $spacing-s;
-        border-bottom: 1px solid $gray;
+        border-bottom: 1px solid var(--gray);
         flex-wrap: wrap
     }
 
@@ -978,7 +978,7 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
 
   .resource {
     display: flow-root;
-    border-top:1px solid $gray;
+    border-top:1px solid var(--gray);
     padding: $spacing-unit 0;
   }
 
@@ -1040,7 +1040,7 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
 
 .browse .collection {
     clear: both;
-    border-top: 1px solid $gray;
+    border-top: 1px solid var(--gray);
     padding-top: $spacing-unit - 1px;
 
     .view-items-link {
@@ -1119,7 +1119,7 @@ footer {
     button {
         width: 30px;
         border: 0;
-        color: #fff;
+        color: var(--button-text-color);
         position: absolute;
         top: 0;
         right: 0;
@@ -1274,7 +1274,7 @@ footer {
 .index.search .results ul li {
   margin-bottom: $spacing-s;
   padding-bottom: $spacing-s;
-  border-bottom: 1px solid $gray;
+  border-bottom: 1px solid var(--gray);
 }
 
 /* @end */
@@ -1303,7 +1303,7 @@ header {
 }
 
 a {
-    &:link { color: $link; }
+    &:link { color: var(--link-color); }
 
     &:visited { color: var(--visited-link-color); }
 
@@ -1352,7 +1352,7 @@ input[type="button"],
 }
 
 .faceted-browse-page .tablesaw td {
-    border-color: $gray;
+    border-color: var(--gray);
 }
 
 .faceted-browse-page button .close-glyph {
@@ -1368,7 +1368,7 @@ input[type="button"],
 }
 
 table.tablesaw {
-    border: 1px solid $gray;
+    border: 1px solid var(--gray);
 }
 
 table.tablesaw td {
