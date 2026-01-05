@@ -1,4 +1,4 @@
-/* @group ----- Generic styles ----- */
+/* @group ----- Mixins ----- */
 
 @mixin resource-link {
     display: flex;
@@ -21,6 +21,14 @@
 /* @end */
 
 /* @group ----- Generic styles ----- */
+
+:root {
+    --gray:#f7f7f7;
+    --white: var(--white);
+    --black: #000;
+    --border-color: #ccc;
+    --thumbnail-size: 100px;
+}
 
 * { box-sizing: border-box; }
 
@@ -93,7 +101,7 @@ dd { margin-left:1.3333em; }
 
 table {
     width:100%;
-    border: 1px solid var(--gray);
+    border: 1px solid var(--border-color);
     border-width: 1px 1px 0 0;
     margin-bottom:1.3333em;
     border-collapse: collapse;
@@ -105,7 +113,7 @@ th {
 }
 
 th, td {
-    border: solid var(--gray);
+    border: solid var(--border-color);
     border-width: 0 0 1px 1px;
     padding: 4px;
 }
@@ -153,7 +161,7 @@ blockquote {
     float: left;
     display: block;
     margin: 0 $spacing-unit $spacing-unit 0;
-    height: 100px;
+    height: var(--thumbnail-size);
     border-bottom: 0;
     overflow: visible;
 }
@@ -161,9 +169,9 @@ blockquote {
 .resource-list img,
 .media-list:not(#itemfiles) img {
     height: 100%;
-    border: 1px solid var(--gray);
+    border: 1px solid var(--border-color);
     padding: (($spacing-s) - 1px);
-    background-color: #fff;
+    background-color: var(--white);
     float: right;
     margin-left: $spacing-l;
 }
@@ -281,7 +289,7 @@ input[type="week"] {
   border-radius: 0;
   box-sizing: border-box;
   background-clip: padding-box;
-  background-color: #fff;
+  background-color: var(--white);
   border: 0;
   box-shadow: 0 0 0 1px #000 inset;
   color: #000;
@@ -386,7 +394,7 @@ select[multiple] {
 /* Tweaks for Safari + Chrome. */
 @media (-webkit-min-device-pixel-ratio: 0) {
   select {
-    background: #fff url('../../../../application/asset/img/select-arrow.svg');
+    background: var(--white) url('../../../../application/asset/img/select-arrow.svg');
     background-repeat: no-repeat;
     background-position: right 6px center;
     background-size: 6px;
@@ -404,7 +412,7 @@ select[multiple] {
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #666), color-stop(1, #000));
     border: 1px solid;
     border-color: #747474 #5e5e5e #4f4f4f;
-    color: #fff;
+    color: var(--white);
     font: 11px/1 'Lucida Grande', Arial, 'Liberation Sans', FreeSans, sans-serif;
     padding: 15px 15px 17px;
     text-shadow: #000 0 0 1px;
@@ -515,7 +523,7 @@ fieldset {
     }
 
     .field {
-        border-bottom:1px solid var(--gray);
+        border-bottom:1px solid var(--border-color);
         width:100%;
         overflow: auto;
         padding: $spacing-m 0;
@@ -602,11 +610,11 @@ div.error {
   position: fixed;
   top: $spacing-unit;
   left: 50%;
-  border: 1px solid var(--gray);
+  border: 1px solid var(--border-color);
   transform: translateX(-50%);
   z-index: -5;
   padding: $spacing-s;
-  background-color: #fff;
+  background-color: var(--white);
   opacity: 0;
   
   &:focus {
@@ -653,7 +661,7 @@ ul.navigation {
 }
 
 .top ul {
-    border: solid var(--gray);
+    border: solid var(--border-color);
     border-width: 0 0 1px 0;
 }
 
@@ -679,7 +687,7 @@ ul.navigation {
 }
 
 #primary-nav ul.navigation {
-    border-top: 1px solid var(--gray);
+    border-top: 1px solid var(--border-color);
     position: relative;
     display: none;
     margin-top: 0;
@@ -727,7 +735,7 @@ ul.navigation {
         }
 
         a {
-            border-bottom: 1px solid var(--gray);
+            border-bottom: 1px solid var(--border-color);
             display:block;
             padding: ($spacing-m) $spacing-unit;
 
@@ -825,7 +833,7 @@ nav.pagination:nth-of-type(3), #content > .pagination:nth-of-type(2) {
 }
 
 nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
-    border-top: 1px solid var(--gray);
+    border-top: 1px solid var(--border-color);
     border-bottom: 0;
     padding-top: $spacing-unit;
     margin: 0 0 $spacing-unit 0;
@@ -840,7 +848,7 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
 }
 
 .site-page-pagination {
-    border-top: 1px solid var(--gray);
+    border-top: 1px solid var(--border-color);
     margin: 0 0 $spacing-unit 0;
     display: flex;
     justify-content: space-between;
@@ -918,7 +926,7 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
     dd.value {
         padding-bottom: $spacing-s;
         margin: 0 0 $spacing-s;
-        border-bottom: 1px solid var(--gray);
+        border-bottom: 1px solid var(--border-color);
         flex-wrap: wrap
     }
 
@@ -941,7 +949,7 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
 
     .language {
         background-color: #000;
-        color: #fff;
+        color: var(--white);
         padding: 0 $spacing-s;
         align-self: flex-start;
     }
@@ -1033,7 +1041,7 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
     font-size: $base-font-size;
     line-height: $base-line-height;
     background: #000;
-    color: #fff;
+    color: var(--white);
 }
 
 .linked-resource .resource-link {
@@ -1042,7 +1050,7 @@ nav.pagination:nth-of-type(3) ul, #content > .pagination:nth-of-type(2) {
 
 .browse .collection {
     clear: both;
-    border-top: 1px solid var(--gray);
+    border-top: 1px solid var(--border-color);
     padding-top: $spacing-unit - 1px;
 
     .view-items-link {
@@ -1276,7 +1284,7 @@ footer {
 .index.search .results ul li {
   margin-bottom: $spacing-s;
   padding-bottom: $spacing-s;
-  border-bottom: 1px solid var(--gray);
+  border-bottom: 1px solid var(--border-color);
 }
 
 /* @end */
@@ -1370,7 +1378,7 @@ input[type="button"],
 }
 
 table.tablesaw {
-    border: 1px solid var(--gray);
+    border: 1px solid var(--border-color);
 }
 
 table.tablesaw td {

@@ -112,7 +112,7 @@ header {
 /* @group ----- Forms ----- */
 
 .field {
-    border-bottom:1px solid #ccc;
+    border-bottom:1px solid var(--border-color);
     width:100%;
     overflow: auto;
     padding: (1 * $spacing-unit) 0;
