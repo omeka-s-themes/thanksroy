@@ -770,7 +770,7 @@ ul.navigation {
         float: right;
         transition-property: transform;
         transition: .5s ease;
-        display: inline-block;
+        display: block;
     }
 
     .open > .sub-nav-toggle:after,
