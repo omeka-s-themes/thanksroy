@@ -132,12 +132,10 @@ blockquote {
     margin: -1px;
     overflow: hidden;
     padding: 0;
-    position: absolute;
     width: 1px;
 }
 
 #skipnav:focus {
-    top:0;
     z-index:9999;
     clip:initial;
     height:auto;
@@ -609,19 +607,18 @@ div.error {
 /* @group ----- Header ----- */
 
 #skipnav {
-  position: fixed;
-  top: $spacing-unit;
-  left: 50%;
+  position: relative;
+  display: block;
   border: 1px solid var(--border-color);
-  transform: translateX(-50%);
   z-index: -5;
-  padding: $spacing-s;
   background-color: var(--white);
-  opacity: 0;
+  height: 0;
+  text-align: center;
   
   &:focus {
+    padding: $spacing-s;
     z-index: 1000;
-    opacity: 1;
+    height: auto;
   }
 }
 
