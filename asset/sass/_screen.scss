@@ -259,6 +259,7 @@ input[type="reset"],
 input[type="submit"],
 input[type="button"] {
   -webkit-appearance: none;
+  appearance: none;
   border:0;
   cursor: pointer;
   font-family:'PT Serif', serif;
@@ -286,6 +287,7 @@ input[type="time"],
 input[type="url"],
 input[type="week"] {
   -webkit-appearance: none;
+  appearance: none;
   border-radius: 0;
   box-sizing: border-box;
   background-clip: padding-box;
