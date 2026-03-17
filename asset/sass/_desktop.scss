@@ -115,7 +115,6 @@ header {
 .field {
     border-bottom:1px solid var(--border-color);
     width:100%;
-    overflow: auto;
     padding: (1 * $spacing-unit) 0;
     display: flex;
     align-items: flex-start;
@@ -127,12 +126,17 @@ header {
 
     .field-meta {
         width: calc(30% - #{.5 * $spacing-unit});
+        margin: 0;
     }
 
     .columns.alpha label,
     .columns.alpha .label {
         width: 100%;
-    }
+    } 
+}
+
+.multi-value.field .field-meta {
+    min-height: 0;
 }
 
 /* @end */
@@ -178,4 +182,10 @@ header {
 
 .resource-list .thumbnail {
     margin-bottom: 0;
+}
+
+/* ----- Modules ----- */
+
+label.numeric-toggle-time.button {
+    padding: (.125 * $spacing-unit) (.25 * $spacing-unit);
 }

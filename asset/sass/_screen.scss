@@ -547,6 +547,11 @@ fieldset {
         width: auto;
         display: inline-block;
     }
+
+    #item-sets .value,
+    #property-queries .value {
+        flex-wrap: wrap;
+    }
 }
 
 #advanced-search input[type="submit"] {
@@ -577,11 +582,6 @@ textarea#rights {
     color:#444;
     padding:0;
     margin:0;
-}
-
-div.error {
-    line-height:1.33333em;
-    margin:1.33333em 0;
 }
 
 /* == Microformats == */
