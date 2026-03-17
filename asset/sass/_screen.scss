@@ -321,15 +321,6 @@ textarea.placeholder_text {
   font-style: italic;
 }
 
-:invalid {
-  /*
-    Suppress red glow that Firefox
-    adds to form fields by default,
-    even when user is still typing.
-  */
-  box-shadow: none;
-}
-
 a:focus,
 button:focus,
 button:active,
