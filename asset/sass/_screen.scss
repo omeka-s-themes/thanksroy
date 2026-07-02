@@ -446,20 +446,12 @@ fieldset {
 }
 
 .multi-value.field .field-meta {
-    padding-right: 2 * $spacing-unit;
     min-height: 1.5 * $spacing-unit;
     position: relative;
-    
-    .add-value {
-        position: absolute;
-        top: 0;
-        right: $spacing-s;
-        width: $spacing-unit;
-    }
 }
 
 .field-meta {
-    margin: $spacing-s 0;
+    padding: (.5 * $spacing-s) 0;
 }
 
 .field-meta label,
@@ -519,18 +511,9 @@ fieldset {
         overflow: auto;
         padding: $spacing-m 0;
         margin-bottom: 0;
-        
-        .remove-value {
-            margin-left: $spacing-s;
-        }
 
         .value {
-            margin-bottom: $spacing-m;
             flex-wrap: wrap;
-        }
-        
-        .value:last-child {
-            margin-bottom: 0;
         }
     }
 
@@ -545,7 +528,7 @@ fieldset {
     }
 }
 
-#advanced-search input[type="submit"] {
+#advanced-search [type="submit"] {
     margin-top: $spacing-unit;
 }
 
