@@ -445,9 +445,10 @@ fieldset {
     padding: 0;
 }
 
-.multi-value.field .field-meta {
+#advanced-search .multi-value.field .field-meta {
     min-height: 1.5 * $spacing-unit;
     position: relative;
+    padding-right: 2 * $spacing-l;
 }
 
 .field-meta {
