@@ -125,6 +125,14 @@ blockquote {
         right: 2.6667em;
     }
 }
+
+button:focus-visible, 
+[type="button"]:focus-visible, 
+[type="reset"]:focus-visible, 
+[type="submit"]:focus-visible {
+    outline: 2px solid AccentColor;
+}
+
 #skipnav {
     border: 0;
     clip: rect(0, 0, 0, 0);
@@ -319,22 +327,6 @@ input.placeholder_text,
 textarea.placeholder_text {
   color: #595959;
   font-style: italic;
-}
-
-a:focus,
-button:focus,
-button:active,
-input:focus,
-input:active,
-select:focus,
-select:active,
-textarea:focus,
-textarea:active,
-button:focus-visible, 
-[type="button"]:focus-visible, 
-[type="reset"]:focus-visible, 
-[type="submit"]:focus-visible {
-  outline: 1px solid var(--link-color);
 }
 
 input[type="file"]:focus,
@@ -714,7 +706,6 @@ ul.navigation {
             padding: ($spacing-m) $spacing-unit;
 
             &:focus {
-              outline: 1px solid var(--link-color);
               position: relative;
               z-index: 100;
             }
